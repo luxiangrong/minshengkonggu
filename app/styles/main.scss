@@ -1,0 +1,219 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$grid-gutter-width: 0px !default;
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/fullpage.js/jquery.fullPage.scss";
+// endbower
+
+.container {
+	&.container-1000 {
+		width: 1000px;
+		max-width: 1000px;
+	}
+}
+
+.site-header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	.navbar-1 {
+		padding: 18px 0;
+		margin-bottom: 0;
+		background: url(../images/bg02.png) repeat-x center;
+		.navbar-header {
+			.navbar-brand {
+				padding: 0;
+				line-height: 50px;
+				color: #ffffff;
+				font-size: 24px;
+				img {
+					display: inline;
+					vertical-align: middle;
+				}
+			}
+		}
+		.navbar-nav {
+			> li {
+				background: url(../images/bg01.png) no-repeat right center;
+				&:last-child, &.last {
+					background: none;
+				}
+				> a {
+					&:hover {
+						background-color: transparent;
+					}
+					color: #ffffff;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+.fullpage {
+	.container {
+		position: relative;
+	}
+	.fp-controlArrow {
+		width: 48px;
+		height: 95px;
+		&.fp-prev {
+			border: none;
+			background: url(../images/pic07.png) no-repeat center center;
+			left: 7%;
+		}
+		&.fp-next {
+			border: none;
+			background: url(../images/pic08.png) no-repeat center center;
+			right: 7%;
+		}
+	}
+	.section {
+		background: url(../images/pic01.jpg) no-repeat center center;
+		background-size: cover;
+		a.down {
+			width: 71px;
+			height: 71px;
+			background: url(../images/pic09.png) no-repeat center center;
+			display: block;
+			position: absolute;
+			left: 50%;
+			margin-left: -35px;
+			bottom: 20px;
+			cursor: pointer;
+			z-index: 9;
+		}
+		h1 {
+			&.title {
+				font-size: 42px;
+				color: #ffffff;
+				font-weight: normal;
+				padding-bottom: 30px;
+				background: url(../images/bg04.png) center bottom no-repeat;
+				small {
+					margin-top: 10px;
+					font-size: 24px;
+					color: #ffffff;
+					display: block;
+				}
+			}
+		}
+		&.banner {
+			background-image: url(../images/pic01.jpg);
+			color: #ffffff;
+			h3 {
+				font-size: 24px;
+				word-spacing: 8px;
+			}
+			.detail {
+				display: block;
+				background: url(../images/bg03.png) no-repeat center top;
+				width: 277px;
+				height: 88px;
+				line-height: 44px;
+				color: #ffffff;
+				margin: 0 auto;
+				margin-top: 50px;
+				&:hover {
+					color: darken(#ffffff, 20%);
+				}
+			}
+		}
+		&.industry {
+			background-image: url(../images/pic02.jpg);
+			.container {
+				margin-top: 100px;
+				p {
+					font-size: 28px;
+					color: #ffffff;
+					margin-top: 30px;
+				}
+			}
+		}
+		&.culture {
+			background-image: url(../images/pic03.jpg);
+			p {
+				margin-top: 100px;
+				padding-left: 100px;
+				padding-right: 100px;
+				padding-bottom: 200px;
+				font-size: 16px;
+				color: #ffffff;
+				text-align: center;
+				line-height: 1.8;
+			}
+		}
+		&.news {
+			background-image: url(../images/pic04.jpg);
+			h1 {
+				margin-bottom: 100px;
+			}
+			.media {
+				color: #ffffff;
+				padding: 8px 10px;
+				.media-object {
+					width: 35px;
+					height: 35px;
+					background: url(../images/bg05.png) no-repeat center center;
+					text-align: center;
+					display: inline-block;
+					line-height: 40px;
+				}
+				.media-body {
+					color: #ffffff;
+					.media-heading {
+						font-weight: normal;
+						font-size: 16px;
+					}
+					p {
+						@include opacity(0.7);
+						font-size: 12px;
+					}
+				}
+				
+			}
+		}
+		&.caring-society {
+			background-image: url(../images/pic05.jpg);
+			h1 {
+				&.title {
+					font-size: 46px;
+					text-align: left;
+					background: none;
+					color: #333333;
+					small {
+						margin-left: 1em;
+						display: inline;
+						color: #666666;
+					}
+				}
+			}
+			ul {
+				margin-left: 0;
+				padding-left: 0;
+				margin-bottom: 100px;
+				li {
+					margin-bottom: 12px;
+					list-style-position: inside;
+				 	a {
+				 		color: #333333;
+				 		font-size: 16px;
+				 		text-decoration: none;
+				 	}	
+				}
+			}
+		}
+		.footer {
+			background-color: #fff;
+			line-height: 110px;
+		}
+	}
+}
