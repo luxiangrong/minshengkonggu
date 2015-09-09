@@ -56,7 +56,7 @@
     </header>
     <section class="news">
         <div class="row">
-        	<div class="col-xs-3 col-1">
+        	<div class="col-xs-4 col-1 col-item">
         		<div class="mask">
         			<div class="info">
         				<img src="images/pic27.png" height="37" width="37" alt="" class="pull-right">
@@ -65,8 +65,8 @@
         			</div>
         		</div>
         	</div>
-        	<div class="col-xs-6 col-2">
-        		<div class="mask active">
+        	<div class="col-xs-4 col-2 col-item">
+        		<div class="mask">
         			<div class="info">
         				<img src="images/pic27.png" height="37" width="37" alt="" class="pull-right">
         				<h4>行业资讯</h4>
@@ -74,7 +74,7 @@
         			</div>
         		</div>
         	</div>
-        	<div class="col-xs-3 col-3">
+        	<div class="col-xs-4 col-3 col-item">
         		<div class="mask">
         			<div class="info">
         				<img src="images/pic27.png" height="37" width="37" alt="" class="pull-right">
@@ -108,6 +108,8 @@
     <script src="/bower_components/fullpage.js/vendors/jquery.easings.min.js"></script>
     <script src="/bower_components/fullpage.js/vendors/jquery.slimscroll.min.js"></script>
     <script src="/bower_components/owl.carousel/dist/owl.carousel.js"></script>
+    <script src="/bower_components/velocity/velocity.js"></script>
+    <script src="/bower_components/velocity/velocity.ui.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js(.) scripts/plugins.js -->
@@ -127,6 +129,19 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script>
+        (function($){
+            $(document).ready(function(){
+                $('.col-item').on('mouseenter', function(){
+                    $(this).parent().find('.col-item').width('25%');
+                    $(this).width('50%');
+                });
+                $('.col-item').on('mouseleave', function(){
+                    $(this).parent().find('.col-item').width('33%');
+                });
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>
