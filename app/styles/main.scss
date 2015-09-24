@@ -10,6 +10,10 @@ $grid-gutter-width: 0px !default;
 @import "bower_components/fullpage.js/jquery.fullPage.scss";
 // endbower
 
+.mt50 {
+	margin-top: 50px;
+}
+
 .container {
 	&.container-1000 {
 		width: 1000px !important;
@@ -115,6 +119,15 @@ $grid-gutter-width: 0px !default;
 		.section {
 			background: url(../images/pic01.jpg) no-repeat center center;
 			background-size: cover;
+			position: relative;
+			.mask {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background: url(../images/bg08.png) repeat center center;
+				left: 0px;
+				top: 0px;
+			}
 			a.down {
 				width: 71px;
 				height: 71px;
@@ -145,6 +158,7 @@ $grid-gutter-width: 0px !default;
 			&.banner {
 				background-image: url(../images/pic01.jpg);
 				color: #ffffff;
+				position: relative;
 				h3 {
 					font-size: 24px;
 					word-spacing: 8px;
@@ -162,6 +176,7 @@ $grid-gutter-width: 0px !default;
 						color: darken(#ffffff, 20%);
 					}
 				}
+				
 			}
 			&.industry {
 				background-image: url(../images/pic02.jpg);
@@ -171,6 +186,9 @@ $grid-gutter-width: 0px !default;
 						font-size: 28px;
 						color: #ffffff;
 						margin-top: 30px;
+					}
+					.col-md-20p {
+						width: 20%;
 					}
 				}
 			}
@@ -185,6 +203,17 @@ $grid-gutter-width: 0px !default;
 					color: #ffffff;
 					text-align: center;
 					line-height: 1.8;
+				}
+				.detail {
+					width: 258px;
+					height: 107px;
+					text-align: center;
+					line-height: 60px;
+					font-size: 18px;
+					color: #fff;
+					background: url(../images/bg09.png) center center no-repeat;
+					display: block;
+					padding-right: 53px;
 				}
 			}
 			&.news {
@@ -244,6 +273,31 @@ $grid-gutter-width: 0px !default;
 					 		font-size: 16px;
 					 		text-decoration: none;
 					 	}	
+					}
+				}
+			}
+			&.friend-link {
+				background-image: url(../images/pic38.jpg);
+				h1 {
+					&.title {
+						font-size: 42px;
+						color: #333;
+						small {
+							color: #333;
+						}
+					}
+
+				}
+				.col-xs-20p {
+					width: 20%;
+					text-align: center;
+					padding: 7px;
+					a {
+						background-color: #fff;
+						padding: 14px;
+						display: inline-block;
+						&:hover {
+						}
 					}
 				}
 			}
